@@ -18,6 +18,7 @@ public class MainMenu extends JFrame{
         setContentPane(MainMenuPanel);
         setSize(900,600);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
 
 
@@ -33,6 +34,14 @@ public class MainMenu extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 new AdminMenu();
+                setVisible(false);
+            }
+        });
+
+        repairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new RepairMenu();
                 setVisible(false);
             }
         });
