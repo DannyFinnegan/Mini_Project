@@ -7,16 +7,17 @@ import java.awt.event.ActionListener;
 public class MainMenu extends JFrame{
     private JButton partsButton;
     private JLabel Label;
-    private JPanel panel;
-    private JButton Butoon2;
-    private JButton butoon3Button;
+    private JPanel MainMenuPanel;
+    private JButton repairButton;
+    private JButton adminButton;
+
 
 
     public MainMenu(){
 
-        setContentPane(panel);
-        partsButton.setSize(50,25);
-        setSize(450,300);
+        setContentPane(MainMenuPanel);
+        setSize(900,600);
+        setLocationRelativeTo(null);
         setVisible(true);
 
 
@@ -28,9 +29,16 @@ public class MainMenu extends JFrame{
                 setVisible(false);
             }
         });
+        adminButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new AdminMenu();
+                setVisible(false);
+            }
+        });
     }
 
     public static void main(String[] args) {
-        MainMenu gui = new MainMenu();
+        MainMenu mainmenu = new MainMenu();
     }
 }
