@@ -1,6 +1,8 @@
 package Computer_Repair_Shop;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class PartsMenu extends JFrame{
     private JButton addPartButton;
@@ -9,6 +11,7 @@ public class PartsMenu extends JFrame{
     private JButton queryPartButton;
     private JLabel Welcome;
     private JPanel PartsPanel;
+    private JButton backButton;
 
     public PartsMenu()
     {
@@ -17,6 +20,15 @@ public class PartsMenu extends JFrame{
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+
+
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainMenu();
+                setVisible(false);
+            }
+        });
     }
     public static void main(String[] args) {
         PartsMenu PartsMenu = new PartsMenu();
