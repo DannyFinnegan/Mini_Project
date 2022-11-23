@@ -11,6 +11,7 @@ public class AddPart extends JFrame {
     private JButton backButton;
     private JTextField PartName;
     private JButton submitButton;
+    private int Counter = 0;
 
     public AddPart()
     {
@@ -34,7 +35,6 @@ public class AddPart extends JFrame {
                String PartPriceAsString = PartPrice.getText();
                String PartNameAsString = PartName.getText();
                String PartDescriptionAsString = PartDescription.getText();
-               int Counter = 0;
                if (PartNameAsString.isEmpty())
                {
                    JOptionPane.showMessageDialog(null,"Part Must Have a Name", "Error",JOptionPane.ERROR_MESSAGE);

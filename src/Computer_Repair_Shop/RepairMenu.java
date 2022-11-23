@@ -29,6 +29,14 @@ public class RepairMenu extends JFrame{
                 setVisible(false);
             }
         });
+
+        logRepairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new LogRepair();
+                setVisible(false);
+            }
+        });
     }
 
     public static void main(String[] args) {

@@ -36,6 +36,10 @@ public class UpdatePart extends JFrame {
                 String PartNameAsString = PartName.getText();
                 String PartDescriptionAsString = PartDescription.getText();
                 String PartIDAsString = PartID.getText();
+                if (PartIDAsString.isEmpty())
+                {
+                    JOptionPane.showMessageDialog(null,"Part ID Cannot be Null","Error",JOptionPane.ERROR_MESSAGE);
+                }
                 if (PartNameAsString.isEmpty())
                 {
                     JOptionPane.showMessageDialog(null,"Part Must Have a Name", "Error",JOptionPane.ERROR_MESSAGE);
