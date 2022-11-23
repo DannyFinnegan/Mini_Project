@@ -43,5 +43,12 @@ public class PartsMenu extends JFrame{
                 setVisible(false);
             }
         });
+        queryPartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new QueryPart();
+                setVisible(false);
+            }
+        });
     }
 }
