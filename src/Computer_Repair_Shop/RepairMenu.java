@@ -51,6 +51,20 @@ public class RepairMenu extends JFrame{
                 setVisible(false);
             }
         });
+        completeRepairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new CompleteRepair();
+                setVisible(false);
+            }
+        });
+        returnRepairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ReturnRepair();
+                setVisible(false);
+            }
+        });
     }
 
     public static void main(String[] args) {
