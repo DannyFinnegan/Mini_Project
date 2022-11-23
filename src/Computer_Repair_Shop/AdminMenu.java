@@ -17,6 +17,8 @@ public class AdminMenu extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+
+
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -28,6 +30,13 @@ public class AdminMenu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new YearlyRevnueAnalysis();
+                setVisible(false);
+            }
+        });
+        partAnalysisButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new YearlyPartAnalysis();
                 setVisible(false);
             }
         });
