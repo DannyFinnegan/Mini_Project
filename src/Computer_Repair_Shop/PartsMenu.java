@@ -32,13 +32,16 @@ public class PartsMenu extends JFrame{
         addPartButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Add_Part();
+                new AddPart();
+                setVisible(false);
+            }
+        });
+        deletePartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new DeletePart();
                 setVisible(false);
             }
         });
     }
-    public static void main(String[] args) {
-        PartsMenu PartsMenu = new PartsMenu();
-    }
-
 }

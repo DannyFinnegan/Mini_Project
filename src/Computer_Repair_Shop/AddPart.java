@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Add_Part extends JFrame {
+public class AddPart extends JFrame {
     private JPanel AddPartPanel;
     private JTextField PartPrice;
     private JTextField PartDescription;
@@ -12,7 +12,7 @@ public class Add_Part extends JFrame {
     private JTextField PartName;
     private JButton submitButton;
 
-    public Add_Part()
+    public AddPart()
     {
         setContentPane(AddPartPanel);
         setSize(900, 600);
@@ -52,7 +52,7 @@ public class Add_Part extends JFrame {
                     Counter++;
                     JOptionPane.showMessageDialog(null, "Part Has Been added to the database"+"\nThe part Details are: "+"\n"+"Part Name: "+PartNameAsString+"\n"+"Part Price: "+PartPriceAsString+"\n"+"Part Description: "+PartDescriptionAsString +"\nPart ID: "+ Counter, "Success", JOptionPane.INFORMATION_MESSAGE);
                     setVisible(false);
-                    new Add_Part();
+                    new AddPart();
                 }
             }
         });
