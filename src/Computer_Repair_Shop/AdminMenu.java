@@ -24,6 +24,13 @@ public class AdminMenu extends JFrame {
                 setVisible(false);
             }
         });
+        revenueAnalysisButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new YearlyRevnueAnalysis();
+                setVisible(false);
+            }
+        });
     }
 
     public static void main(String[] args) {

@@ -50,5 +50,12 @@ public class PartsMenu extends JFrame{
                 setVisible(false);
             }
         });
+        updatePartButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new UpdatePart();
+                setVisible(false);
+            }
+        });
     }
 }
