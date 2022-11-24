@@ -49,7 +49,7 @@ public class MainMenu extends JFrame {
         });
 
         /**
-         *
+         * Action Listener used to call the Repair Menu
          */
         repairButton.addActionListener(new ActionListener() {
             @Override
