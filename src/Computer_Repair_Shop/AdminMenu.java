@@ -41,8 +41,4 @@ public class AdminMenu extends JFrame {
             }
         });
     }
-
-    public static void main(String[] args) {
-        AdminMenu adminmenu = new AdminMenu();
-    }
 }

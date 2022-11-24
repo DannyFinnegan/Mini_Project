@@ -66,9 +66,5 @@ public class RepairMenu extends JFrame{
             }
         });
     }
-
-    public static void main(String[] args) {
-        RepairMenu repairmenu = new RepairMenu();
-    }
 }
 

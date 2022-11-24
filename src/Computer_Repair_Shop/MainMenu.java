@@ -4,7 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainMenu extends JFrame{
+/**
+ * Represents the GUI required to build the main menu
+ */
+public class MainMenu extends JFrame {
     private JButton partsButton;
     private JLabel Label;
     private JPanel MainMenuPanel;
@@ -12,16 +15,20 @@ public class MainMenu extends JFrame{
     private JButton adminButton;
 
 
-
-    public MainMenu(){
+    /**
+     * The constructor used to build the main menu
+     */
+    public MainMenu() {
 
         setContentPane(MainMenuPanel);
-        setSize(900,600);
+        setSize(900, 600);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
 
-
+/**
+ * Action Listener used to call the Parts menu
+ */
         partsButton.addActionListener(new ActionListener() {
 
             @Override
@@ -30,6 +37,9 @@ public class MainMenu extends JFrame{
                 setVisible(false);
             }
         });
+        /**
+         * Action Listener used to call the Admin Menu
+         */
         adminButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,6 +48,9 @@ public class MainMenu extends JFrame{
             }
         });
 
+        /**
+         *
+         */
         repairButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -45,9 +58,5 @@ public class MainMenu extends JFrame{
                 setVisible(false);
             }
         });
-    }
-
-    public static void main(String[] args) {
-        MainMenu mainmenu = new MainMenu();
     }
 }
