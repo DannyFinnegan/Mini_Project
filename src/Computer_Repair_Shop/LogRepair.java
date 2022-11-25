@@ -44,6 +44,11 @@ public class LogRepair extends JFrame{
                 }
                 if (CustomerEmailAsString.isEmpty())
                 {
+                    JOptionPane.showMessageDialog(null,"Customer Email Cannot Be Null","Error",JOptionPane.ERROR_MESSAGE);
+
+                }
+                if (!CustomerEmailAsString.isEmpty())
+                {
                     JOptionPane.showMessageDialog(null,"Email Cannot Be Null","Error",JOptionPane.ERROR_MESSAGE);
                     if (!(CustomerEmailAsString.endsWith("@gmail.com") || CustomerEmailAsString.endsWith(".ie")||CustomerEmailAsString.endsWith("@hotmail.com")))
                     {
@@ -54,7 +59,7 @@ public class LogRepair extends JFrame{
                 {
                     JOptionPane.showMessageDialog(null,"Repair details cannot be Null","Error",JOptionPane.ERROR_MESSAGE);
                 }
-                else
+                if (!RepairIDAsString.isEmpty() && !CustomerEmailAsString.isEmpty() && !RepairDetalsAsString.isEmpty() && (CustomerEmailAsString.endsWith("@gmail.com") || CustomerEmailAsString.endsWith(".ie")||CustomerEmailAsString.endsWith("@hotmail.com")))
                 {
                     JOptionPane.showMessageDialog(null, "The repair has been logged and added to the database","Success",JOptionPane.INFORMATION_MESSAGE);
                     new LogRepair();

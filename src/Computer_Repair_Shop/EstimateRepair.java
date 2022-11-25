@@ -55,7 +55,7 @@ public class EstimateRepair extends JFrame{
                 {
                     JOptionPane.showMessageDialog(null, "Engineer name cannot be null", "Error", JOptionPane.ERROR_MESSAGE);
                 }
-                else
+                else if (!RepairIDAsString.isEmpty() && !RepairCostAsString.isEmpty() && RepairCostAsString.charAt(0) == '€' && !EngineerNameAsString.isEmpty())
                 {
                     JOptionPane.showMessageDialog(null, "Repair has been updated and a price has been added", "Success", JOptionPane.INFORMATION_MESSAGE);
                     new EstimateRepair();

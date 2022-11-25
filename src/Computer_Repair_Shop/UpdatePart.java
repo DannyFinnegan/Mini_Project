@@ -41,6 +41,10 @@ public class UpdatePart extends JFrame {
                 if (PartNameAsString.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Part Must Have a Name", "Error", JOptionPane.ERROR_MESSAGE);
                 }
+                if (PartPriceAsString.isEmpty())
+                {
+                    JOptionPane.showMessageDialog(null, "Part Must Have a Price", "Error", JOptionPane.ERROR_MESSAGE);
+                }
                 if (!PartPriceAsString.isEmpty()) {
                     if (!(PartPriceAsString.charAt(0) == '€')) {
                         JOptionPane.showMessageDialog(null, "Price must begin with a € Symbol", "Error", JOptionPane.ERROR_MESSAGE);

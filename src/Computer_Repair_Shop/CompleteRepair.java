@@ -63,6 +63,11 @@ public class CompleteRepair extends JFrame{
                     {
                         JOptionPane.showMessageDialog(null,"Repair must be completed before the customer can be notified", "Error", JOptionPane.ERROR_MESSAGE);
                     }
+                    if (!(RepairCompleteAsString.charAt(0) =='y') || !(RepairCompleteAsString.charAt(0) =='n'))
+                    {
+                        JOptionPane.showMessageDialog(null,"Answer is not valid, Please use Yes/No", "Error", JOptionPane.ERROR_MESSAGE);
+
+                    }
 
                 }
             }

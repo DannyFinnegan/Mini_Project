@@ -48,10 +48,14 @@ public class ConfirmRepair extends JFrame{
                     if (RandomNumber==1)
                     {
                         JOptionPane.showMessageDialog(null,"The customer has requested the repair be completed","Response",JOptionPane.INFORMATION_MESSAGE);
+                        new ConfirmRepair();
+                        setVisible(false);
                     }
                     if (RandomNumber==2)
                     {
                         JOptionPane.showMessageDialog(null,"The customer has requested the repair be cancelled","Response",JOptionPane.INFORMATION_MESSAGE);
+                        new ConfirmRepair();
+                        setVisible(false);
                     }
 
                 }
