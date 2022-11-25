@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 /**
  * Represents the GUI required to build the main menu
+ * @author Daniel Finnegan
  */
 public class MainMenu extends JFrame {
     private JButton partsButton;
@@ -19,7 +20,9 @@ public class MainMenu extends JFrame {
      * The constructor used to build the main menu
      */
     public MainMenu() {
-
+/**
+ * @paramm MainMenuPanel is the GUI Panel which buuilds the main menu
+ */
         setContentPane(MainMenuPanel);
         setSize(900, 600);
         setLocationRelativeTo(null);
@@ -30,7 +33,9 @@ public class MainMenu extends JFrame {
  * Action Listener used to call the Parts menu
  */
         partsButton.addActionListener(new ActionListener() {
-
+            /**
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 new PartsMenu();

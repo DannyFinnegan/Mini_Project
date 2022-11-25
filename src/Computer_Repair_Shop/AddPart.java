@@ -39,6 +39,10 @@ public class AddPart extends JFrame {
                {
                    JOptionPane.showMessageDialog(null,"Part Must Have a Name", "Error",JOptionPane.ERROR_MESSAGE);
                }
+                if (PartPriceAsString.isEmpty()) {
+
+                        JOptionPane.showMessageDialog(null, "Part must have a price", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
                if (!PartPriceAsString.isEmpty()) {
                    if (!(PartPriceAsString.charAt(0) == '€')) {
                        JOptionPane.showMessageDialog(null, "Price must begin with a € Symbol", "Error", JOptionPane.ERROR_MESSAGE);
@@ -48,7 +52,7 @@ public class AddPart extends JFrame {
                 {
                     JOptionPane.showMessageDialog(null,"Part Must Have a Description", "Error",JOptionPane.ERROR_MESSAGE);
                 }
-                else
+                if (!PartNameAsString.isEmpty() && !PartPriceAsString.isEmpty() && PartPriceAsString.charAt(0) == '€' && !PartDescriptionAsString.isEmpty())
                 {
                     Counter++;
                     JOptionPane.showMessageDialog(null, "Part Has Been added to the database"+"\nThe part Details are: "+"\n"+"Part Name: "+PartNameAsString+"\n"+"Part Price: "+PartPriceAsString+"\n"+"Part Description: "+PartDescriptionAsString +"\nPart ID: "+ Counter, "Success", JOptionPane.INFORMATION_MESSAGE);
