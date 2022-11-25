@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
  * Represents the GUI required to build the main menu
  * @author Daniel Finnegan
  */
+
 public class MainMenu extends JFrame {
     private JButton partsButton;
     private JLabel Label;
@@ -21,7 +22,8 @@ public class MainMenu extends JFrame {
      */
     public MainMenu() {
 /**
- * @paramm MainMenuPanel is the GUI Panel which buuilds the main menu
+ * @paramm MainMenuPanel is the GUI Panel which builds the main menu
+ * @param MainMenu is the constructor used to build the Main Menu
  */
         setContentPane(MainMenuPanel);
         setSize(900, 600);
@@ -42,26 +44,24 @@ public class MainMenu extends JFrame {
                 setVisible(false);
             }
         });
-        /**
-         * Action Listener used to call the Admin Menu
-         */
-        adminButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new AdminMenu();
-                setVisible(false);
-            }
+
+        adminButton.addActionListener(e -> {
+            /**
+             * Action Listener used to call the Admin Menu
+             * @param adminButton is used to call the Admin Menu
+             */
+            new AdminMenu();
+            setVisible(false);
         });
 
-        /**
-         * Action Listener used to call the Repair Menu
-         */
-        repairButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new RepairMenu();
-                setVisible(false);
-            }
+
+        repairButton.addActionListener(e -> {
+            /**
+             * Action Listener used to call the Repair Menu
+             * @param repairButton is used to call the repair menu
+             */
+            new RepairMenu();
+            setVisible(false);
         });
     }
 }
